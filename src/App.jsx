@@ -15,7 +15,7 @@ function App() {
         Q-Buster
         </div>
         </div>
-      <div className='w-[45%]'>
+      <div className='w-[50%] ml-36'>
         <Input
         isClearable
         radius="lg"
@@ -51,7 +51,6 @@ function App() {
       </div>
     </nav>
 
-    <div className='w-[160vh] h-[160vh] bg-primary rounded-full absolute -top-[85vh] -right-[22vh] -z-20'></div>
 
     <div className="main-container flex">
       <div className="left w-[50%] h-screen flex justify-center items-center">
@@ -60,14 +59,16 @@ function App() {
         <div className='text-secondary text-4xl pt-4 pb-12 font-medium'>One Stop Destination</div>
         <div className='text-black text-lg'>Beat the Queue: Get a wait time & unique token - track your order live & plan your time</div>
         <div className='w-fit flex flex-center flex-col items-center'>
-        <div className=' pt-10 text-3xl font-medium italic pb-7 w-fit'>Wait Less, Eat Fresh</div>
+        <div className=' pt-16 text-3xl font-medium italic pb-7 w-fit'>" Wait Less, Eat Fresh "</div>
         <Button className='rounded-full px-16 text-black font-medium w-fit' color="primary" variant="shadow">Order Now!</Button>
         </div>
       </div>
     </div>
 
     <div className="right w-[50%]">
-
+      <div className='w-[160vh] h-[160vh] bg-primary rounded-full absolute -top-[85vh] -right-[22vh] -z-20 flex flex-end items-end overflow-hidden'>
+        <img src="./src/assets/rounded-food.png" alt="" className='w-50 relative -bottom-[30%] -right-[15%] rotate-[36]' />
+      </div>
     </div>
     </div>
     </>
