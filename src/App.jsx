@@ -67,7 +67,7 @@ function App() {
     </div>
     <div className="right w-[50%]">
       <div className='w-[160vh] h-[160vh] bg-primary rounded-full absolute -top-[85vh] -right-[22vh] -z-20 flex flex-end items-end overflow-hidden'>
-        <img src="./src/assets/rounded-food.png" alt="" className='w-50 relative -bottom-[30%] -right-[15%] rotate-[36]' />
+        <img src="./src/assets/rounded-food.png" alt="" className='w-[70%] relative -bottom-[30%] -right-[15%] rotate-[34deg]' />
       </div>
       <div className='h-fit w-fit relative top-[50vh] -right-[26vh]' >
         <img src="./src/assets/Italian.png" alt="" />
