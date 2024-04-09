@@ -15,7 +15,7 @@ function App() {
         Q-Buster
         </div>
         </div>
-      <div className='w-[40%]'>
+      <div className='w-[45%]'>
         <Input
         isClearable
         radius="lg"
@@ -40,7 +40,7 @@ function App() {
         }}
         placeholder="Search your favourite food"
         startContent={
-          <SearchIcon className="text-black/50 mb-0.5 dark:text-white/90 text-slate-400 pointer-events-none flex-shrink-0" />
+          <SearchIcon className="text-black/50 mb-0.5 dark:text-white/90 text-secondary pointer-events-none flex-shrink-0" />
         }
       />
       </div>
