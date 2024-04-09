@@ -15,7 +15,7 @@ function App() {
         Q-Buster
         </div>
         </div>
-      <div className='w-[60%]'>
+      <div className='w-[40%]'>
         <Input
         isClearable
         radius="lg"
@@ -45,11 +45,13 @@ function App() {
       />
       </div>
       
-      <div className='flex justify-between align-center text-primary gap-16 text-2xl cursor-pointer'>
+      <div className='flex justify-between align-center gap-16 text-2xl cursor-pointer'>
       <i class="ri-shopping-cart-2-line"></i>
       <i class="ri-shopping-bag-line"></i>
       </div>
     </nav>
+
+    <div className='w-[160vh] h-[160vh] bg-primary rounded-full absolute -top-[85vh] -right-[22vh] -z-20'></div>
 
     <div className="main-container flex">
       <div className="left w-[50%] h-screen flex justify-center items-center">
@@ -63,8 +65,10 @@ function App() {
         </div>
       </div>
     </div>
-        
-      <div className="right w-[50%]"></div>
+
+    <div className="right w-[50%]">
+
+    </div>
     </div>
     </>
   )
