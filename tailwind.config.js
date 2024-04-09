@@ -12,6 +12,9 @@ export default {
         'primary': '#F45E5E',
         'secondary': '#333333',
         'tertiary': '#000000'
+      },
+      fontFamily: {
+        'Poppins': ['Poppins'],
       }
     },
   },

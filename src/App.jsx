@@ -9,9 +9,12 @@ function App() {
   return (
     <>
     <nav className='mt-8 flex justify-between items-center w-[80%] mx-auto'>
-      <div>
-        {/* ALSO ADD LOGO  */}
-        Q-Buster</div>
+      <div className='flex justify-between items-center gap-4'>
+        <img src="./src/assets/logo.png" className='w-12    border-2 border-red-900 rounded-2xl'/>
+        <div className='font-Poppins font-semibold text-2xl text-center'>
+        Q-Buster
+        </div>
+        </div>
       <div className='w-[60%]'>
         <Input
         isClearable
@@ -42,21 +45,22 @@ function App() {
       />
       </div>
       
-      <div>
-        {/* TWO ICON FROM REMIX ICONS: CART AND BAG */}
-
+      <div className='flex justify-between align-center text-primary gap-16 text-2xl cursor-pointer'>
+      <i class="ri-shopping-cart-2-line"></i>
+      <i class="ri-shopping-bag-line"></i>
       </div>
     </nav>
 
     <div className="main-container flex">
       <div className="left w-[50%] h-screen flex justify-center items-center">
-        <div className="text-container w-[70%]">
-        <div className='text-primary text-4xl font-bold'>Delicious.</div>
-        <div className='text-secondary text-3xl pt-2 pb-4'>One Stop Destination</div>
+        <div className="text-container w-[70%] font-Poppins">
+        <div className='text-primary text-7xl font-semibold'>Delicious.</div>
+        <div className='text-secondary text-4xl pt-4 pb-12 font-medium'>One Stop Destination</div>
         <div className='text-black text-lg'>Beat the Queue: Get a wait time & unique token - track your order live & plan your time</div>
-
-        <div className=' pt-10 text-lg font-bold italic'>Wait Less, Eat Fresh</div>
-        <Button className='rounded-full px-16 text-black font-bold' color="primary" variant="shadow">Order Now!</Button>
+        <div className='w-fit flex flex-center flex-col items-center'>
+        <div className=' pt-10 text-3xl font-medium italic pb-7 w-fit'>Wait Less, Eat Fresh</div>
+        <Button className='rounded-full px-16 text-black font-medium w-fit' color="primary" variant="shadow">Order Now!</Button>
+        </div>
       </div>
     </div>
         
