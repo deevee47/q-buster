@@ -46,8 +46,10 @@ function App() {
       </div>
       
       <div className='flex justify-between align-center gap-16 text-2xl cursor-pointer'>
-      <i class="ri-shopping-cart-2-line"></i>
-      <i class="ri-shopping-bag-line"></i>
+        <div className='hover:bg-white rounded-full p-2 pr-3 pl-3'>
+      <i class="ri-shopping-cart-2-line hover:[transition-all]" ></i></div>
+      <div className='hover:bg-white rounded-full p-2 pr-3 pl-3'>
+      <i class="ri-shopping-bag-line hover:[transition-all]"></i></div>
       </div>
     </nav>
 
@@ -68,6 +70,15 @@ function App() {
     <div className="right w-[50%]">
       <div className='w-[160vh] h-[160vh] bg-primary rounded-full absolute -top-[85vh] -right-[22vh] -z-20 flex flex-end items-end overflow-hidden'>
         <img src="./src/assets/rounded-food.png" alt="" className='w-50 relative -bottom-[30%] -right-[15%] rotate-[36]' />
+      </div>
+      <div className='h-fit w-fit relative top-[50vh] -right-[26vh]' >
+        <img src="./src/assets/Italian.png" alt="" />
+      </div>
+
+      <div className='mt-[53vh] text-center mr-[24vh] flex justify-center items-center'>
+        <img src="./src/assets/spoon.png" alt="" className='-mr-2 drop-shadow-lg cursor-pointer'/>
+        <span className='bg-primary pt-2 pb-2 pl-28 pr-28 rounded-full h-fit font-light z-10'>Nestle Hotspot</span>
+        <img src="./src/assets/spoon-2.png" alt="" className='-ml-2 drop-shadow-lg cursor-pointer'/>
       </div>
     </div>
     </div>
