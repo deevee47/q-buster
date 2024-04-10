@@ -4,16 +4,24 @@ import { SearchIcon } from "./SearchIcon";
 import { Button } from "@nextui-org/react";
 
 const Colorchange = () => {
-  const [color, setColor] = useState('primary-red');
-  const [rotation, setRotation] = useState(34); // Initial rotation of 34 degrees
-  const colors = ['primary-red', 'primary-green', 'primary-beige', 'primary-orange'];
+  const [colorIndex, setColorIndex] = useState(0);
+  const [textColor, setColor] = useState('text-primary-beige');
+  const [bgColor, setBgColor] = useState('bg-primary-beige');
+  const [rotation, setRotation] = useState("rotate-34"); // Initial rotation of 34 degrees
+  const colors = ['primary-beige', 'primary-green', 'primary-red', 'primary-orange'];
 
   const handleClick = () => {
-    const currentIndex = colors.indexOf(color);
-    const nextIndex = (currentIndex + 1) % colors.length;
-    setColor(colors[nextIndex]);
-    setRotation(rotation + 36); // Increase rotation by 36 degrees
-    console.log("Color:", color);
+    const nextIndex = (colorIndex + 1) % colors.length;
+    setColorIndex(nextIndex);
+    const newTextColor = `text-${colors[nextIndex]}`
+    const newBgColor = `bg-${colors[nextIndex]}`
+    const newRotation = `rotate-${34*nextIndex}`
+    setColor(newTextColor)
+    setBgColor(newBgColor)
+    setRotation(newRotation);
+
+    console.log(rotation)
+    console.log("Color:", bgColor);
   };
 
   return (
@@ -68,22 +76,22 @@ const Colorchange = () => {
       <div className="main-container flex">
         <div className="left w-[50%] h-screen flex justify-center items-center">
           <div className="text-container w-[70%] font-Poppins">
-            <div className={`text-${color} text-7xl font-semibold`}>Delicious.</div>
+            <div className={`${textColor} text-7xl font-semibold`}>Delicious.</div>
             <div className='text-secondary text-4xl pt-4 pb-12 font-medium'>One Stop Destination</div>
             <div className='text-black text-lg'>Beat the Queue: Get a wait time & unique token - track your order live & plan your time</div>
             <div className='w-fit flex flex-center flex-col items-center'>
               <div className=' pt-16 text-3xl font-medium italic pb-7 w-fit'>" Wait Less, Eat Fresh "</div>
-              <Button className='rounded-full px-16 text-black font-medium w-fit' color={color} variant="shadow">Order Now!</Button>
+              <Button className='rounded-full px-16 text-black font-medium w-fit' color={textColor} variant="shadow">Order Now!</Button>
             </div>
           </div>
         </div>
 
         <div className="right w-[50%]">
-          <div className={`w-[160vh] h-[160vh] bg-${color} rounded-full absolute -top-[85vh] -right-[22vh] -z-20 flex flex-end items-end overflow-hidden`}>
+          <div className={`${bgColor} w-[160vh] h-[160vh] rounded-full absolute -top-[85vh] -right-[22vh] -z-20 flex flex-end items-end overflow-hidden`}>
             <img
               src="./src/assets/rounded-food.png"
               alt=""
-              className={`w-[70%] relative -bottom-[30%] -right-[15%] rotate-[${rotation}] transition-transform duration-500`}
+              className={`${rotation} w-[70%] relative -bottom-[30%] -right-[15%] transition-transform duration-500`}
             />
           </div>
           <div className='h-fit w-fit relative top-[50vh] -right-[26vh]'>
@@ -97,7 +105,7 @@ const Colorchange = () => {
               alt=""
               className='-mr-2 drop-shadow-lg cursor-pointer hover:rotate-12 transition-transform duration-300'
             />
-            <span className={`bg-${color} pt-2 pb-2 pl-28 pr-28 rounded-full h-fit font-light z-10`}>Nestle Hotspot</span>
+            <span className={`${bgColor} pt-2 pb-2 pl-28 pr-28 rounded-full h-fit font-light z-10`}>Nestle Hotspot</span>
             <img
               onClick={handleClick}
               src="./src/assets/spoon-2.png"

@@ -18,6 +18,13 @@ export default {
       },
       fontFamily: {
         'Poppins': ['Poppins'],
+      },
+      rotate: {
+        '34': '34deg',
+        '68': '68deg',
+        '102': '102deg',
+        '136': '136deg',
+        '170': '170deg',
       }
     },
   },
