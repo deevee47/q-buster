@@ -83,7 +83,7 @@ const Colorchange = () => {
               <div className=' pt-16 text-3xl font-medium italic pb-7 w-fit'>" Wait Less, Eat Fresh "</div>
               <Button className={`${bgColor} rounded-full px-16 text-black font-medium w-fit`} variant="shadow">Order Now!</Button>
             </div>
-          </div>
+          </div>   
         </div>
 
         <div className="right w-[50%]">
