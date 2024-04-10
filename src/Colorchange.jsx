@@ -25,7 +25,7 @@ const Colorchange = () => {
   };
 
   return (
-    <div>
+    <div className='overflow-hidden'>
       <nav className='mt-8 flex justify-between items-center w-[80%] mx-auto'>
         <div className='flex justify-between items-center gap-4'>
           <img src="./src/assets/logo.png" className='w-12 border-2 border-red-900 rounded-2xl' />
