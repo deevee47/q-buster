@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import './App.css'
-import {Input} from "@nextui-org/react";
-import {SearchIcon} from "./SearchIcon";
-import {Button} from "@nextui-org/react";
 import Colorchange from './Colorchange.jsx'
+import OrderMenu from './OrderMenu.jsx'
 
 
 function App() {
@@ -11,6 +8,7 @@ function App() {
   return (
     <div>
     <Colorchange />
+    <OrderMenu />
     </div>
   )
 }
