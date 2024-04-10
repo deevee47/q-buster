@@ -752,7 +752,7 @@ const OrderMenu = () => {
           width={270}
         />
         <div className='flex justify-around items-center py-2 pt-4'>
-        <div className='text-center p-4 rounded-full bg-primary-orange cursor-pointer font-semibold'>
+        <div className='text-center p-4 rounded-full bg-primary-green cursor-pointer font-semibold'>
           Buy Now
         </div>
         <div className='text-center p-4 rounded-full bg-secondary text-white cursor-pointer font-semibold'>
@@ -775,7 +775,7 @@ const OrderMenu = () => {
           width={270}
         />
         <div className='flex justify-around items-center py-2 pt-4'>
-        <div className='text-center p-4 rounded-full bg-primary-orange cursor-pointer font-semibold'>
+        <div className='text-center p-4 rounded-full bg-primary-green cursor-pointer font-semibold'>
           Buy Now
         </div>
         <div className='text-center p-4 rounded-full bg-secondary text-white cursor-pointer font-semibold'>
@@ -798,7 +798,7 @@ const OrderMenu = () => {
           width={270}
         />
         <div className='flex justify-around items-center py-2 pt-4'>
-        <div className='text-center p-4 rounded-full bg-primary-orange cursor-pointer font-semibold'>
+        <div className='text-center p-4 rounded-full bg-primary-green cursor-pointer font-semibold'>
           Buy Now
         </div>
         <div className='text-center p-4 rounded-full bg-secondary text-white cursor-pointer font-semibold'>
@@ -821,7 +821,7 @@ const OrderMenu = () => {
           width={270}
         />
         <div className='flex justify-around items-center py-2 pt-4'>
-        <div className='text-center p-4 rounded-full bg-primary-orange cursor-pointer font-semibold'>
+        <div className='text-center p-4 rounded-full bg-primary-green cursor-pointer font-semibold'>
           Buy Now
         </div>
         <div className='text-center p-4 rounded-full bg-secondary text-white cursor-pointer font-semibold'>
@@ -844,7 +844,7 @@ const OrderMenu = () => {
           width={270}
         />
         <div className='flex justify-around items-center py-2 pt-4'>
-        <div className='text-center p-4 rounded-full bg-primary-orange cursor-pointer font-semibold'>
+        <div className='text-center p-4 rounded-full bg-primary-green cursor-pointer font-semibold'>
           Buy Now
         </div>
         <div className='text-center p-4 rounded-full bg-secondary text-white cursor-pointer font-semibold'>
@@ -867,7 +867,7 @@ const OrderMenu = () => {
           width={270}
         />
         <div className='flex justify-around items-center py-2 pt-4'>
-        <div className='text-center p-4 rounded-full bg-primary-orange cursor-pointer font-semibold'>
+        <div className='text-center p-4 rounded-full bg-primary-green cursor-pointer font-semibold'>
           Buy Now
         </div>
         <div className='text-center p-4 rounded-full bg-secondary text-white cursor-pointer font-semibold'>
@@ -890,7 +890,7 @@ const OrderMenu = () => {
           width={270}
         />
         <div className='flex justify-around items-center py-2 pt-4'>
-        <div className='text-center p-4 rounded-full bg-primary-orange cursor-pointer font-semibold'>
+        <div className='text-center p-4 rounded-full bg-primary-green cursor-pointer font-semibold'>
           Buy Now
         </div>
         <div className='text-center p-4 rounded-full bg-secondary text-white cursor-pointer font-semibold'>
@@ -913,7 +913,7 @@ const OrderMenu = () => {
           width={270}
         />
         <div className='flex justify-around items-center py-2 pt-4'>
-        <div className='text-center p-4 rounded-full bg-primary-orange cursor-pointer font-semibold'>
+        <div className='text-center p-4 rounded-full bg-primary-green cursor-pointer font-semibold'>
           Buy Now
         </div>
         <div className='text-center p-4 rounded-full bg-secondary text-white cursor-pointer font-semibold'>
@@ -936,7 +936,7 @@ const OrderMenu = () => {
           width={270}
         />
         <div className='flex justify-around items-center py-2 pt-4'>
-        <div className='text-center p-4 rounded-full bg-primary-orange cursor-pointer font-semibold'>
+        <div className='text-center p-4 rounded-full bg-primary-green cursor-pointer font-semibold'>
           Buy Now
         </div>
         <div className='text-center p-4 rounded-full bg-secondary text-white cursor-pointer font-semibold'>
@@ -959,7 +959,7 @@ const OrderMenu = () => {
           width={270}
         />
         <div className='flex justify-around items-center py-2 pt-4'>
-        <div className='text-center p-4 rounded-full bg-primary-orange cursor-pointer font-semibold'>
+        <div className='text-center p-4 rounded-full bg-primary-green cursor-pointer font-semibold'>
           Buy Now
         </div>
         <div className='text-center p-4 rounded-full bg-secondary text-white cursor-pointer font-semibold'>
