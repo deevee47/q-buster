@@ -17,7 +17,7 @@ const Colorchange = () => {
     setColorIndex(nextIndex);
     const newTextColor = `text-${colors[nextIndex]}`
     const newBgColor = `bg-${colors[nextIndex]}`
-    const newRotation = `rotate-${34*nextIndex}`
+    const newRotation = `rotate-${34*(nextIndex + 1)}`
     setColor(newTextColor)
     setBgColor(newBgColor)
     setRotation(newRotation);
@@ -94,7 +94,7 @@ const Colorchange = () => {
             <img
               src="./src/assets/rounded-food.png"
               alt=""
-              className={`${rotation} w-[70%] relative -bottom-[30%] -right-[15%] transition-transform duration-500`}
+              className={`${rotation} w-[70%] relative -bottom-[30%] -right-[15%] duration-500`}
             />
           </div>
           <div className='h-fit w-fit relative top-[50vh] -right-[26vh]'>
