@@ -25,7 +25,7 @@ module.exports = {
         '102': '102deg',
         '136': '136deg',
         '170': '170deg',
-      }
+      },
     },
   },
   darkMode: "class",

@@ -8,7 +8,7 @@ const Colorchange = () => {
   const [textColor, setColor] = useState('text-primary-beige');
   const [cafe, setCafe] = useState('Southern Stories');
   const [bgColor, setBgColor] = useState('bg-primary-beige');
-  const [rotation, setRotation] = useState("rotate-34"); // Initial rotation of 34 degrees
+  const [rotation, setRotation] = useState("rotate-[0deg]"); // Initial rotation of 34 degrees
   const colors = ['primary-beige', 'primary-green', 'primary-red', 'primary-orange'];
   const cafes = ['Southern Stories', 'Quench', 'Maggi Hotspot', 'Chai OK'];
 
@@ -17,7 +17,7 @@ const Colorchange = () => {
     setColorIndex(nextIndex);
     const newTextColor = `text-${colors[nextIndex]}`
     const newBgColor = `bg-${colors[nextIndex]}`
-    const newRotation = `rotate-${34*(nextIndex + 1)}`
+    const newRotation = `rotate-[${34*(nextIndex + 1)}deg]`
     setColor(newTextColor)
     setBgColor(newBgColor)
     setRotation(newRotation);
