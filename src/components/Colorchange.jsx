@@ -69,12 +69,15 @@ const Colorchange = () => {
           />
         </div>
 
-        <div className='flex justify-between align-center gap-16 text-2xl cursor-pointer'>
+        <div className='flex pl-10 justify-between align-center gap-8 text-2xl cursor-pointer'>
           <div className='hover:bg-white rounded-full p-2 pr-3 pl-3'>
             <i className="ri-shopping-cart-2-line hover:[transition-all]"></i>
           </div>
           <div className='hover:bg-white rounded-full p-2 pr-3 pl-3'>
             <i className="ri-shopping-bag-line hover:[transition-all]"></i>
+          </div>
+          <div className='hover:bg-white rounded-full p-2 pr-3 pl-3'>
+            <i class="ri-notification-2-line"></i>
           </div>
         </div>
       </nav>
