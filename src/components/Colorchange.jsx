@@ -11,7 +11,8 @@ const Colorchange = () => {
   const [rotation, setRotation] = useState("rotate-[0deg]"); // Initial rotation of 0 degrees
   const colors = ['primary-beige', 'primary-green', 'primary-red', 'primary-orange'];
   const cafes = ['Southern Stories', 'Quench', 'Maggi Hotspot', 'Chai OK'];
-
+  const photos = ["./src/assets/Italian.png", "./src/assets/dosa.jpeg", "./src/assets/fries.png", "./src/assets/Italian.png"];
+  const [photo, setPhoto] = useState("./src/assets/Italian.png");
   const handleClick = (direction) => {
     const nextIndex = (colorIndex + 1) % colors.length;
     setColorIndex(nextIndex);
@@ -22,6 +23,7 @@ const Colorchange = () => {
     setBgColor(newBgColor);
     setRotation(newRotation);
     setCafe(cafes[nextIndex]);
+    setPhoto(photos[nextIndex]);
 
     console.log(rotation);
     console.log("Color:", bgColor);
@@ -98,7 +100,7 @@ const Colorchange = () => {
             />
           </div>
           <div className='h-fit w-fit relative top-[50vh] -right-[26vh]'>
-            <img src="./src/assets/Italian.png" alt="" />
+            <img src={photo} alt="" />
           </div>
 
           <div className='mt-[53vh] text-center mr-[24vh] flex justify-center items-center'>
