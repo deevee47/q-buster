@@ -11,7 +11,7 @@ const Colorchange = () => {
   const [rotation, setRotation] = useState("rotate-[0deg]"); // Initial rotation of 0 degrees
   const colors = ['primary-beige', 'primary-green', 'primary-red', 'primary-orange'];
   const cafes = ['Southern Stories', 'Quench', 'Maggi Hotspot', 'Chai OK'];
-  const photos = ["./src/assets/Italian.png", "./src/assets/dosa.jpeg", "./src/assets/fries.png", "./src/assets/Italian.png"];
+  const photos = ["./src/assets/Italian.png", "./src/assets/south.png", "./src/assets/salad.png", "./src/assets/mexican.png"];
   const [photo, setPhoto] = useState("./src/assets/Italian.png");
   const handleClick = (direction) => {
     const nextIndex = (colorIndex + 1) % colors.length;
