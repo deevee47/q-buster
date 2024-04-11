@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Input } from "@nextui-org/react";
 import { SearchIcon } from "./SearchIcon";
 import { Button } from "@nextui-org/react";
+import OrderMenu from './OrderMenu';
 
 const Colorchange = () => {
   const [colorIndex, setColorIndex] = useState(0);
@@ -10,9 +11,10 @@ const Colorchange = () => {
   const [bgColor, setBgColor] = useState('bg-primary-beige');
   const [rotation, setRotation] = useState("rotate-[0deg]"); // Initial rotation of 0 degrees
   const colors = ['primary-beige', 'primary-green', 'primary-red', 'primary-orange'];
-  const cafes = ['Southern Stories', 'Quench', 'Maggi Hotspot', 'Chai OK'];
+  const cafes = ['Southern Stories', 'Quench', 'Maggi Hotspot', 'Kathi & COP'];
   const photos = ["./src/assets/Italian.png", "./src/assets/south.png", "./src/assets/salad.png", "./src/assets/mexican.png"];
   const [photo, setPhoto] = useState("./src/assets/Italian.png");
+  
   const handleClick = (direction) => {
     const nextIndex = (colorIndex + 1) % colors.length;
     setColorIndex(nextIndex);
@@ -24,7 +26,6 @@ const Colorchange = () => {
     setRotation(newRotation);
     setCafe(cafes[nextIndex]);
     setPhoto(photos[nextIndex]);
-
     console.log(rotation);
     console.log("Color:", bgColor);
   };
@@ -120,6 +121,9 @@ const Colorchange = () => {
           </div>
         </div>
       </div>
+      
+      {<OrderMenu cafe={cafe} />}
+      
     </div>
   );
 };
