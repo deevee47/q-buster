@@ -8,22 +8,22 @@ const Colorchange = () => {
   const [textColor, setColor] = useState('text-primary-beige');
   const [cafe, setCafe] = useState('Southern Stories');
   const [bgColor, setBgColor] = useState('bg-primary-beige');
-  const [rotation, setRotation] = useState("rotate-[0deg]"); // Initial rotation of 34 degrees
+  const [rotation, setRotation] = useState("rotate-[0deg]"); // Initial rotation of 0 degrees
   const colors = ['primary-beige', 'primary-green', 'primary-red', 'primary-orange'];
   const cafes = ['Southern Stories', 'Quench', 'Maggi Hotspot', 'Chai OK'];
 
-  const handleClick = () => {
+  const handleClick = (direction) => {
     const nextIndex = (colorIndex + 1) % colors.length;
     setColorIndex(nextIndex);
-    const newTextColor = `text-${colors[nextIndex]}`
-    const newBgColor = `bg-${colors[nextIndex]}`
-    const newRotation = `rotate-[${34*(nextIndex + 1)}deg]`
-    setColor(newTextColor)
-    setBgColor(newBgColor)
+    const newTextColor = `text-${colors[nextIndex]}`;
+    const newBgColor = `bg-${colors[nextIndex]}`;
+    const newRotation = direction === "clockwise" ? `rotate-[${34 * (nextIndex + 1)}deg]` : `rotate-[-${34 * (nextIndex + 1)}deg]`;
+    setColor(newTextColor);
+    setBgColor(newBgColor);
     setRotation(newRotation);
-    setCafe(cafes[nextIndex])
+    setCafe(cafes[nextIndex]);
 
-    console.log(rotation)
+    console.log(rotation);
     console.log("Color:", bgColor);
   };
 
@@ -59,7 +59,7 @@ const Colorchange = () => {
                 "!cursor-text",
               ],
             }}
-            placeholder="Search your favourite food"
+            placeholder="Search your favorite food"
             startContent={
               <SearchIcon className="text-black/50 mb-0.5 dark:text-white/90 text-secondary pointer-events-none flex-shrink-0" />
             }
@@ -103,14 +103,14 @@ const Colorchange = () => {
 
           <div className='mt-[53vh] text-center mr-[24vh] flex justify-center items-center'>
             <img
-              onClick={handleClick}
+              onClick={() => handleClick("anti-clockwise")}
               src="./src/assets/spoon.png"
               alt=""
               className='-mr-2 drop-shadow-lg cursor-pointer hover:rotate-12 transition-transform duration-300'
             />
             <span className={`${bgColor} pt-2 pb-2 pl-28 pr-28 rounded-full h-fit font-light z-10`}>{cafe}</span>
             <img
-              onClick={handleClick}
+              onClick={() => handleClick("clockwise")}
               src="./src/assets/spoon-2.png"
               alt=""
               className='-ml-2 drop-shadow-lg cursor-pointer hover:rotate-12 transition-transform duration-300'
