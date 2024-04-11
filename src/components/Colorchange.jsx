@@ -6,9 +6,11 @@ import { Button } from "@nextui-org/react";
 const Colorchange = () => {
   const [colorIndex, setColorIndex] = useState(0);
   const [textColor, setColor] = useState('text-primary-beige');
+  const [cafe, setCafe] = useState('Southern Stories');
   const [bgColor, setBgColor] = useState('bg-primary-beige');
   const [rotation, setRotation] = useState("rotate-34"); // Initial rotation of 34 degrees
   const colors = ['primary-beige', 'primary-green', 'primary-red', 'primary-orange'];
+  const cafes = ['Southern Stories', 'Quench', 'Maggi Hotspot', 'Chai OK'];
 
   const handleClick = () => {
     const nextIndex = (colorIndex + 1) % colors.length;
@@ -19,6 +21,7 @@ const Colorchange = () => {
     setColor(newTextColor)
     setBgColor(newBgColor)
     setRotation(newRotation);
+    setCafe(cafes[nextIndex])
 
     console.log(rotation)
     console.log("Color:", bgColor);
@@ -105,7 +108,7 @@ const Colorchange = () => {
               alt=""
               className='-mr-2 drop-shadow-lg cursor-pointer hover:rotate-12 transition-transform duration-300'
             />
-            <span className={`${bgColor} pt-2 pb-2 pl-28 pr-28 rounded-full h-fit font-light z-10`}>Nestle Hotspot</span>
+            <span className={`${bgColor} pt-2 pb-2 pl-28 pr-28 rounded-full h-fit font-light z-10`}>{cafe}</span>
             <img
               onClick={handleClick}
               src="./src/assets/spoon-2.png"

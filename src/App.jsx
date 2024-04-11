@@ -1,6 +1,6 @@
 import './App.css'
-import Colorchange from './Colorchange.jsx'
-import OrderMenu from './OrderMenu.jsx'
+import Colorchange from './components/Colorchange.jsx'
+import OrderMenu from './components/OrderMenu.jsx'
 
 
 function App() {
