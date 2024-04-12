@@ -14,21 +14,20 @@ const Colorchange = () => {
   const cafes = ['Southern Stories', 'Quench', 'Maggi Hotspot', 'Kathi & COP'];
   const photos = ["./assets/Italian.png", "./assets/south.png", "./assets/salad.png", "./assets/mexican.png"];
   const [photo, setPhoto] = useState("./assets/Italian.png");
-  
-  const handleClick = (direction) => {
-    const nextIndex = (colorIndex + 1) % colors.length;
-    setColorIndex(nextIndex);
-    const newTextColor = `text-${colors[nextIndex]}`;
-    const newBgColor = `bg-${colors[nextIndex]}`;
-    const newRotation = direction === "clockwise" ? `rotate-[${34 * (nextIndex + 1)}deg]` : `rotate-[-${34 * (nextIndex + 1)}deg]`;
-    setColor(newTextColor);
-    setBgColor(newBgColor);
-    setRotation(newRotation);
-    setCafe(cafes[nextIndex]);
-    setPhoto(photos[nextIndex]);
-    console.log(rotation);
-    console.log("Color:", bgColor);
-  };
+    
+    const handleClick = (direction) => {
+      const nextIndex = (colorIndex + 1) % colors.length;
+      setColorIndex(nextIndex);
+      const newTextColor = `text-${colors[nextIndex]}`;
+      const newBgColor = `bg-${colors[nextIndex]}`;
+      const newRotation = direction === "clockwise" ? `${34 * (nextIndex + 1)}deg` : `-${34 * (nextIndex + 1)}deg`;
+      setColor(newTextColor);
+      setBgColor(newBgColor);
+      setRotation(newRotation);
+      setCafe(cafes[nextIndex]);
+      setPhoto(photos[nextIndex]);
+      console.log("Rotation:", rotation); // Check rotation value in console
+    };
 
   return (
     <div className='overflow-hidden'>
@@ -97,10 +96,11 @@ const Colorchange = () => {
 
         <div className="right w-[50%]">
           <div className={`${bgColor} w-[160vh] h-[160vh] rounded-full absolute -top-[85vh] -right-[22vh] -z-20 flex flex-end items-end overflow-hidden`}>
-            <img
+          <img
               src="./assets/rounded-food.png"
               alt=""
-              className={`${rotation} w-[70%] relative -bottom-[30%] -right-[15%] duration-500`}
+              className={`w-[70%] relative -bottom-[30%] transition-transform transform -right-[15%] duration-500`}
+              style={{ transform: `rotate(${rotation})` }} // Apply rotation style inline
             />
           </div>
           <div className='h-fit w-fit relative top-[50vh] -right-[26vh]'>
