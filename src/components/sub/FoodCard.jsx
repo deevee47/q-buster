@@ -8,7 +8,7 @@ const FoodCard = ({ name, price, image, buttonColor }) => {
       <Card className="py-4  bg-rose-50 bg-opacity-30 backdrop-filter backdrop-blur-lg">
       <CardHeader className="pb-0 pt-2 px-4 flex flex-col items-center">
         <p className="text-2xl text-center uppercase font-bold">{name}</p>
-        <h4 className="font-medium text-xl">${price}</h4>
+        <h4 className="font-medium text-xl">₹{price}</h4>
       </CardHeader>
       <CardBody className="overflow-visible py-2">
         <Image

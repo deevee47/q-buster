@@ -44,16 +44,16 @@ const OrderMenu = ({ cafe }) => {
       return (
       <div className='font-Poppins p-12'>
       <CafeCard name={"Kathi & COP Order Menu"} color={"text-primary-orange"} gradient={"from-orange-300 to-orange-200"}>  
-      <FoodCard name={"Chole Bhature"} price={"80"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
-      <FoodCard name={"Chole Bhature"} price={"80"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
-      <FoodCard name={"Chole Bhature"} price={"80"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
-      <FoodCard name={"Chole Bhature"} price={"80"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
-      <FoodCard name={"Chole Bhature"} price={"80"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
-      <FoodCard name={"Chole Bhature"} price={"80"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
-      <FoodCard name={"Chole Bhature"} price={"80"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
-      <FoodCard name={"Chole Bhature"} price={"80"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
-      <FoodCard name={"Chole Bhature"} price={"80"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
-      <FoodCard name={"Chole Bhature"} price={"80"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
+      <FoodCard name={"Egg Roll"} price={"80"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
+      <FoodCard name={"Paneer Shawarma"} price={"95"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
+      <FoodCard name={"Paneer Tikka Roll"} price={"100"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
+      <FoodCard name={"Paneer Makhani Roll"} price={"110"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
+      <FoodCard name={"Paneer Bhurji Roll"} price={"100"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
+      <FoodCard name={"Paneer Schezwan Roll"} price={"110"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
+      <FoodCard name={"Paneer Egg Roll"} price={"100"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
+      <FoodCard name={"Noodles Roll"} price={"85"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
+      <FoodCard name={"Soya Chap Roll"} price={"85"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
+      <FoodCard name={"Creamy Soya Roll"} price={"100"} buttonColor={"bg-primary-orange"} image={"./assets/chole.png"}></FoodCard>
       </CafeCard>
       </div>)
     }
