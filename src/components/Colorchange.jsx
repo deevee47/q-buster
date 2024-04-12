@@ -103,7 +103,7 @@ const Colorchange = () => {
               style={{ transform: `rotate(${rotation})` }} // Apply rotation style inline
             />
           </div>
-          <div className='h-fit w-fit relative top-[50vh] -right-[26vh]'>
+          <div className='h-fit w-fit relative top-[50%] -right-[30%]'>
             <img src={photo} alt="" />
           </div>
 
