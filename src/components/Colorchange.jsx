@@ -95,7 +95,7 @@ const Colorchange = () => {
         </div>
 
         <div className="right w-[50%]">
-          <div className={`${bgColor} w-[160vh] h-[160vh] rounded-full absolute -top-[85vh] -right-[25vh] -z-20 flex flex-end items-end overflow-hidden`}>
+          <div className={`${bgColor} w-[80vw] h-[80vw] rounded-full absolute -top-[85vh] -right-[25vh] -z-20 flex flex-end items-end overflow-hidden`}>
           <img
               src="./assets/rounded-food.png"
               alt=""
@@ -103,11 +103,11 @@ const Colorchange = () => {
               style={{ transform: `rotate(${rotation})` }} // Apply rotation style inline
             />
           </div>
-          <div className='h-fit w-fit relative top-[50%] -right-[30%]'>
+          <div className='h-fit w-fit relative top-[50%] -right-[32%]'>
             <img src={photo} alt="" />
           </div>
 
-          <div className='ml-12 mt-[58vh] text-center mr-[24vh] flex justify-center items-center'>
+          <div className='ml-12 mt-[58vh] text-center mr-[24vh] flex justify-center items-center w-[80%]'>
             <img
               onClick={() => handleClick("anti-clockwise")}
               src="./assets/spoon.png"
