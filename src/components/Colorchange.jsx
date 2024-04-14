@@ -12,7 +12,7 @@ const Colorchange = () => {
   const [rotation, setRotation] = useState("rotate-[0deg]"); // Initial rotation of 0 degrees
   const colors = ['primary-beige', 'primary-green', 'primary-red', 'primary-orange'];
   const cafes = ['Southern Stories', 'Quench', 'Maggi Hotspot', 'Kathi & COP'];
-  const photos = ["./assets/Italian.png", "./assets/south.png", "./assets/salad.png", "./assets/mexican.png"];
+  const photos = ["./assets/south.png", "./assets/salad.png", "./assets/Italian.png", "./assets/mexican.png"];
   const [photo, setPhoto] = useState("./assets/Italian.png");
     
     const handleClick = (direction) => {
@@ -95,7 +95,7 @@ const Colorchange = () => {
         </div>
 
         <div className="right w-[50%]">
-          <div className={`${bgColor} w-[160vh] h-[160vh] rounded-full absolute -top-[85vh] -right-[22vh] -z-20 flex flex-end items-end overflow-hidden`}>
+          <div className={`${bgColor} w-[160vh] h-[160vh] rounded-full absolute -top-[85vh] -right-[25vh] -z-20 flex flex-end items-end overflow-hidden`}>
           <img
               src="./assets/rounded-food.png"
               alt=""
@@ -107,14 +107,14 @@ const Colorchange = () => {
             <img src={photo} alt="" />
           </div>
 
-          <div className='mt-[53vh] text-center mr-[24vh] flex justify-center items-center'>
+          <div className='ml-12 mt-[58vh] text-center mr-[24vh] flex justify-center items-center'>
             <img
               onClick={() => handleClick("anti-clockwise")}
               src="./assets/spoon.png"
               alt=""
               className='-mr-2 drop-shadow-lg cursor-pointer hover:rotate-12 transition-transform duration-300'
             />
-            <span className={`${bgColor} pt-2 pb-2 pl-28 pr-28 rounded-full h-fit font-light z-10`}>{cafe}</span>
+            <div className={`${bgColor} pt-2 pb-2 pl-28 pr-28 rounded-full h-fit font-light z-10`}>{cafe}</div>
             <img
               onClick={() => handleClick("clockwise")}
               src="./assets/spoon-2.png"
