@@ -13,7 +13,7 @@ const Colorchange = () => {
   const colors = ['primary-beige', 'primary-green', 'primary-red', 'primary-orange'];
   const cafes = ['Southern Stories', 'Quench', 'Maggi Hotspot', 'Kathi & COP'];
   const photos = ["./assets/south.png", "./assets/salad.png", "./assets/Italian.png", "./assets/mexican.png"];
-  const [photo, setPhoto] = useState("./assets/Italian.png");
+  const [photo, setPhoto] = useState("./assets/south.png");
     
     const handleClick = (direction) => {
       const nextIndex = (colorIndex + 1) % colors.length;
