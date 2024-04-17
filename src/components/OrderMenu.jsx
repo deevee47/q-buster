@@ -7,7 +7,7 @@ const OrderMenu = ({ cafe }) => {
   const selectedCafe = cafes.find((item) => item.name === cafe); // Find the selected cafe from the data
 
   if (!selectedCafe) {
-    return <div>No menu available for {cafe}</div>; // Render a message if the cafe is not found
+    return <div></div>;
   }
 
   const { name, menu, color } = selectedCafe;

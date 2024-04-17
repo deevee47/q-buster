@@ -1,33 +1,36 @@
 import React, { useState } from 'react';
-import { Input } from "@nextui-org/react";
+import { Input, Button } from "@nextui-org/react"; // Assuming Button is imported from the same library
 import { SearchIcon } from "./SearchIcon";
-import { Button } from "@nextui-org/react";
 import OrderMenu from './OrderMenu';
 
 const Colorchange = () => {
   const [colorIndex, setColorIndex] = useState(0);
-  const [textColor, setColor] = useState('text-primary-beige');
+  const [textColor, setTextColor] = useState('text-primary-beige');
   const [cafe, setCafe] = useState('Southern Stories');
   const [bgColor, setBgColor] = useState('bg-primary-beige');
-  const [rotation, setRotation] = useState("rotate-[0deg]"); // Initial rotation of 0 degrees
+  const [rotation, setRotation] = useState("rotate-[0deg]");
   const colors = ['primary-beige', 'primary-green', 'primary-red', 'primary-orange'];
   const cafes = ['Southern Stories', 'Quench', 'Nestle Hotspot', 'Kathi & COP'];
   const photos = ["./assets/south.png", "./assets/salad.png", "./assets/Italian.png", "./assets/mexican.png"];
   const [photo, setPhoto] = useState("./assets/south.png");
-    
-    const handleClick = (direction) => {
-      const nextIndex = (colorIndex + 1) % colors.length;
-      setColorIndex(nextIndex);
-      const newTextColor = `text-${colors[nextIndex]}`;
-      const newBgColor = `bg-${colors[nextIndex]}`;
-      const newRotation = direction === "clockwise" ? `${34 * (nextIndex + 1)}deg` : `-${34 * (nextIndex + 1)}deg`;
-      setColor(newTextColor);
-      setBgColor(newBgColor);
-      setRotation(newRotation);
-      setCafe(cafes[nextIndex]);
-      setPhoto(photos[nextIndex]);
-      console.log("Rotation:", rotation); // Check rotation value in console
-    };
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const handleClick = (direction) => {
+    const nextIndex = (colorIndex + 1) % colors.length;
+    setColorIndex(nextIndex);
+    const newTextColor = `text-${colors[nextIndex]}`;
+    const newBgColor = `bg-${colors[nextIndex]}`;
+    const newRotation = direction === "clockwise" ? `${34 * (nextIndex + 1)}deg` : `-${34 * (nextIndex + 1)}deg`;
+    setTextColor(newTextColor);
+    setBgColor(newBgColor);
+    setRotation(newRotation);
+    setCafe(cafes[nextIndex]);
+    setPhoto(photos[nextIndex]);
+  };
+
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
 
   return (
     <div className="overflow-hidden">
@@ -36,6 +39,7 @@ const Colorchange = () => {
           <img
             src="/assets/logo.png"
             className="w-12 border-2 border-red-900 rounded-2xl"
+            alt="Logo"
           />
           <div className="font-Poppins font-semibold text-2xl text-center">
             Q-Buster
@@ -83,7 +87,6 @@ const Colorchange = () => {
           </div>
         </div>
       </nav>
-
       <div className="main-container flex">
         <div className="left w-[50%] h-screen flex justify-center items-center">
           <div className="text-container w-[70%] font-Poppins">
@@ -98,10 +101,11 @@ const Colorchange = () => {
               live & plan your time
             </div>
             <div className="w-fit flex flex-center flex-col items-center">
-              <div className=" pt-16 text-3xl font-medium italic pb-7 w-fit">
+              <div className="pt-16 text-3xl font-medium italic pb-7 w-fit">
                 " Wait Less, Eat Fresh "
               </div>
               <Button
+                onClick={toggleMenu}
                 className={`${bgColor} rounded-full px-16 text-black font-medium w-fit`}
                 variant="shadow"
               >
@@ -117,20 +121,23 @@ const Colorchange = () => {
           >
             <img
               src="./assets/rounded-food.png"
-              alt=""
+              alt="Food"
               className={`w-[70%] relative -bottom-[30%] transition-transform transform -right-[15%] duration-500 object-cover`}
-              style={{ transform: `rotate(${rotation})` }} // Apply rotation style inline
+              style={{ transform: `rotate(${rotation})` }}
             />
           </div>
           <div className="h-fit w-fit relative top-[50%] -right-[32%]">
-            <img src={photo} alt="" />
+            <img src={photo} alt="Food" />
           </div>
 
           <div className="ml-12 mt-96 text-center mr-[24vh] flex justify-center items-center w-[80%]">
             <img
-              onClick={() => handleClick("anti-clockwise")}
+              onClick={() => {
+                handleClick("anti-clockwise");
+                setMenuVisible(false);
+              }}
               src="./assets/spoon.png"
-              alt=""
+              alt="Spoon"
               className="-mr-2 drop-shadow-lg cursor-pointer hover:rotate-12 transition-transform duration-300"
             />
             <div
@@ -139,15 +146,18 @@ const Colorchange = () => {
               {cafe}
             </div>
             <img
-              onClick={() => handleClick("clockwise")}
+              onClick={() => {
+                handleClick("clockwise");
+                setMenuVisible(false);
+              }}
               src="./assets/spoon-2.png"
-              alt=""
+              alt="Spoon 2"
               className="-ml-2 drop-shadow-lg cursor-pointer hover:rotate-12 transition-transform duration-300"
             />
           </div>
         </div>
       </div>
-     {<OrderMenu cafe={cafe} />}
+      {menuVisible && <OrderMenu cafe={cafe} />} {/* Render menu if visible */}
     </div>
   );
 };

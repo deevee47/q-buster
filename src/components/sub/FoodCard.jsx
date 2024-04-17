@@ -6,7 +6,7 @@ const FoodCard = ({ name, price, image, buttonColor }) => {
   return (
     <div>
       <Card className="py-4  bg-rose-50 bg-opacity-30 backdrop-filter backdrop-blur-lg">
-      <CardHeader className="pb-0 pt-2 px-4 flex flex-col items-center">
+      <CardHeader className="pb-0 pt-0 px-4 flex flex-col items-center">
         <p className="text-2xl text-center uppercase font-bold">{name}</p>
         <h4 className="font-medium text-xl">₹{price}</h4>
       </CardHeader>
@@ -18,8 +18,7 @@ const FoodCard = ({ name, price, image, buttonColor }) => {
           width={270}
         />
         <div className='flex justify-around items-center py-2 pt-4'>
-        <Button className={`${buttonColor} rounded-full font-semibold w-fit`} variant="shadow">Order Now!</Button>
-        <Button className={`bg-secondary text-white rounded-full font-semibold w-fit`} variant="shadow">Add to Cart</Button>
+        <Button className={`bg-secondary text-white rounded-full font-semibold w-[50%]`} variant="shadow">Add to Cart</Button>
         </div>
       </CardBody>
     </Card>
