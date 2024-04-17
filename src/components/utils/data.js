@@ -3,6 +3,7 @@ import React from "react";
 export const cafes = [
   {
     name: "Maggi Hotspot",
+    color: "bg-primary-red",
     menu: [
       {
         name: "Maggi",
@@ -68,6 +69,7 @@ export const cafes = [
   },
   {
     name: "Southern Stories",
+    color: "bg-primary-beige",
     menu: [
       {
         name: "Plain Dosa",
@@ -133,6 +135,7 @@ export const cafes = [
   },
   {
     name: "Kathi & COP",
+    color: "bg-primary-orange",
     menu: [
       {
         name: "Egg Roll",
@@ -198,6 +201,7 @@ export const cafes = [
   },
   {
     name: "Quench",
+    color: "bg-primary-green",
     menu: [
       {
         name: "Peri Peri Fries",

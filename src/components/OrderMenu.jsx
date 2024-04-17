@@ -10,14 +10,14 @@ const OrderMenu = ({ cafe }) => {
     return <div>No menu available for {cafe}</div>; // Render a message if the cafe is not found
   }
 
-  const { name, menu } = selectedCafe;
+  const { name, menu, color } = selectedCafe;
 
   return (
     <div className="font-Poppins p-12">
       <CafeCard
         name={`${name} Order Menu`}
-        color={`text-primary-${selectedCafe.color}`}
-        gradient={`from-${selectedCafe.gradient}`}
+        color={`${color}`}
+      
       >
         {menu.map((item, index) => (
           <FoodCard
