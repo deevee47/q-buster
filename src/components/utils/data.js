@@ -2,7 +2,7 @@ import React from "react";
 
 export const cafes = [
   {
-    name: "Maggi Hotspot",
+    name: "Nestle Hotspot",
     color: "bg-primary-red",
     menu: [
       {
