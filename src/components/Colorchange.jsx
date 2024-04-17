@@ -76,7 +76,7 @@ const Colorchange = () => {
             <i className="ri-shopping-bag-line hover:[transition-all]"></i>
           </div>
           <div className='hover:bg-white rounded-full p-2 pr-3 pl-3'>
-            <i class="ri-notification-2-line"></i>
+            <i className="ri-notification-2-line"></i>
           </div>
         </div>
       </nav>
