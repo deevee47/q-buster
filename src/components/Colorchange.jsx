@@ -33,8 +33,8 @@ const Colorchange = () => {
     const newBgColor = `bg-${colors[nextIndex]}`;
     const newRotation =
       direction === "clockwise"
-        ? `${34 * (nextIndex + 1)}deg`
-        : `-${34 * (nextIndex + 1)}deg`;
+        ? `${44.5 * (nextIndex + 1)}deg`
+        : `-${44.5 * (nextIndex + 1)}deg`;
     setTextColor(newTextColor);
     setBgColor(newBgColor);
     setRotation(newRotation);

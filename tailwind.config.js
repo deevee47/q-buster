@@ -9,26 +9,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary-red': '#F45E5E',
-        'primary-blue': '#63CEFC',
-        'primary-beige': '#F7D297',
-        'primary-green': '#74C365',
-        'primary-orange': '#FC9A63',
-        'secondary': '#333333',
-        'tertiary': '#000000'
+        "primary-red": "#F45E5E",
+        "primary-blue": "#63cefc",
+        "primary-beige": "#F7D297",
+        "primary-green": "#74C365",
+        "primary-orange": "#FC9A63",
+        "secondary": "#333333",
+        "tertiary": "#000000",
       },
       fontFamily: {
-        'Poppins': ['Poppins'],
+        Poppins: ["Poppins"],
       },
       rotate: {
-        '34': '34deg',
-        '68': '68deg',
-        '102': '102deg',
-        '136': '136deg',
-        '170': '170deg',
+        34: "34deg",
+        68: "68deg",
+        102: "102deg",
+        136: "136deg",
+        170: "170deg",
       },
     },
   },
   darkMode: "class",
   plugins: [nextui()],
-}
+};
