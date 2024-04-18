@@ -132,7 +132,7 @@ const Colorchange = () => {
 
         <div className="right w-[50%]">
           <div
-            className={`${bgColor} w-[80vw] h-[80vw] rounded-full absolute -top-[80%] -right-[12%] -z-20 flex flex-end items-end overflow-hidden`}
+            className={`${bgColor} w-[75%] h-[150%] rounded-full absolute -top-[75%] -right-[10%] -z-20 flex flex-end items-end overflow-hidden`}
           >
             <img
               src="./assets/rounded-food.png"
@@ -145,7 +145,7 @@ const Colorchange = () => {
             <img src={photo} alt="Food" />
           </div>
 
-          <div className="ml-12 mt-96 text-center mr-[24vh] flex justify-center items-center w-[80%]">
+          <div className="ml-12 mt-[55%] text-center mr-[24vh] flex justify-center items-center w-[80%]">
             <img
               onClick={() => {
                 handleClick("anti-clockwise");
