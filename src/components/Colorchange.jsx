@@ -1,26 +1,40 @@
-import React, { useState } from 'react';
-import { Input, Button } from "@nextui-org/react"; // Assuming Button is imported from the same library
+import React, { useState } from "react";
+import { Input, Button } from "@nextui-org/react";
 import { SearchIcon } from "./SearchIcon";
-import OrderMenu from './OrderMenu';
+import OrderMenu from "./OrderMenu";
 
 const Colorchange = () => {
   const [colorIndex, setColorIndex] = useState(0);
-  const [textColor, setTextColor] = useState('text-primary-beige');
-  const [cafe, setCafe] = useState('Southern Stories');
-  const [bgColor, setBgColor] = useState('bg-primary-beige');
+  const [textColor, setTextColor] = useState("text-primary-beige");
+  const [cafe, setCafe] = useState("Southern Stories");
+  const [bgColor, setBgColor] = useState("bg-primary-beige");
   const [rotation, setRotation] = useState("rotate-[0deg]");
-  const colors = ['primary-beige', 'primary-green', 'primary-red', 'primary-orange'];
-  const cafes = ['Southern Stories', 'Quench', 'Nestle Hotspot', 'Kathi & COP'];
-  const photos = ["./assets/south.png", "./assets/salad.png", "./assets/Italian.png", "./assets/mexican.png"];
+  const colors = [
+    "primary-beige",
+    "primary-green",
+    "primary-red",
+    "primary-orange",
+  ];
+  const cafes = ["Southern Stories", "Quench", "Nestle Hotspot", "Kathi & COP"];
+  const photos = [
+    "./assets/south.png",
+    "./assets/salad.png",
+    "./assets/Italian.png",
+    "./assets/mexican.png",
+  ];
   const [photo, setPhoto] = useState("./assets/south.png");
   const [menuVisible, setMenuVisible] = useState(false);
+  const [shouldScrollToMenu, setShouldScrollToMenu] = useState(false);
 
   const handleClick = (direction) => {
     const nextIndex = (colorIndex + 1) % colors.length;
     setColorIndex(nextIndex);
     const newTextColor = `text-${colors[nextIndex]}`;
     const newBgColor = `bg-${colors[nextIndex]}`;
-    const newRotation = direction === "clockwise" ? `${34 * (nextIndex + 1)}deg` : `-${34 * (nextIndex + 1)}deg`;
+    const newRotation =
+      direction === "clockwise"
+        ? `${34 * (nextIndex + 1)}deg`
+        : `-${34 * (nextIndex + 1)}deg`;
     setTextColor(newTextColor);
     setBgColor(newBgColor);
     setRotation(newRotation);
@@ -30,6 +44,7 @@ const Colorchange = () => {
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
+    setShouldScrollToMenu(!menuVisible);
   };
 
   return (
@@ -157,7 +172,13 @@ const Colorchange = () => {
           </div>
         </div>
       </div>
-      {menuVisible && <OrderMenu cafe={cafe} />} {/* Render menu if visible */}
+      {menuVisible && (
+        <OrderMenu
+          cafe={cafe}
+          shouldScrollToMenu={shouldScrollToMenu}
+          setShouldScrollToMenu={setShouldScrollToMenu}
+        />
+      )}
     </div>
   );
 };
