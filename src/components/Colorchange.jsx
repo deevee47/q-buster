@@ -13,14 +13,16 @@ const Colorchange = () => {
     "primary-beige",
     "primary-green",
     "primary-red",
+    "primary-blue",
     "primary-orange",
   ];
-  const cafes = ["Southern Stories", "Quench", "Nestle Hotspot", "Kathi & COP"];
+  const cafes = ["Southern Stories", "Quench", "Nestle Hotspot", "Cafe One", "Urban Kitchen"];
   const photos = [
     "./assets/south.png",
     "./assets/salad.png",
     "./assets/Italian.png",
     "./assets/mexican.png",
+    "./assets/nonveg.png",
   ];
   const [photo, setPhoto] = useState("./assets/south.png");
   const [menuVisible, setMenuVisible] = useState(false);

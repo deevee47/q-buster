@@ -134,8 +134,8 @@ export const cafes = [
     ],
   },
   {
-    name: "Kathi & COP",
-    color: "bg-primary-orange",
+    name: "Cafe One",
+    color: "bg-primary-blue",
     menu: [
       {
         name: "Egg Roll",
@@ -262,6 +262,72 @@ export const cafes = [
         price: "80",
         buttonColor: "bg-primary-green",
         image: "./assets/fries.png",
+      },
+    ],
+  },
+  {
+    name: "Urban Kitchen",
+    color: "bg-primary-orange",
+    menu: [
+      {
+        name: "Dal Makhani",
+        price: "240",
+        buttonColor: "bg-primary-green",
+        image: "./assets/paneer.png",
+      },
+      {
+        name: "Dal Tadka",
+        price: "160",
+        buttonColor: "bg-primary-green",
+        image: "./assets/paneer.png",
+      },
+      {
+        name: "Paneer Butter Masala",
+        price: "280",
+        buttonColor: "bg-primary-green",
+        image: "./assets/paneer.png",
+      },
+      {
+        name: "Paneer Lababdar",
+        price: "280",
+        buttonColor: "bg-primary-green",
+        image: "./assets/paneer.png",
+      },
+      {
+        name: "Shahi Paneer",
+        price: "280",
+        buttonColor: "bg-primary-green",
+        image: "./assets/paneer.png",
+      },
+      {
+        name: "Kadhai Paneer",
+        price: "280",
+        buttonColor: "bg-primary-green",
+        image: "./assets/paneer.png",
+      },
+      {
+        name: "Paneer Dhania Adrak",
+        price: "280",
+        buttonColor: "bg-primary-green",
+        image: "./assets/paneer.png",
+      },
+      {
+        name: "Matar Mushroom",
+        price: "280",
+        buttonColor: "bg-primary-green",
+        image: "./assets/paneer.png",
+      },
+      {
+        name: "Matar Paneer",
+        price: "280",
+        buttonColor: "bg-primary-green",
+        image: "./assets/paneer.png",
+      },
+      {
+        name: "Aloo Jeera",
+        price: "H:100 / F:160",
+        buttonColor: "bg-primary-green",
+        image: "./assets/paneer.png",
       },
     ],
   },
