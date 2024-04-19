@@ -12,16 +12,16 @@ const Colorchange = () => {
   const colors = [
     "primary-beige",
     "primary-green",
-    "primary-red",
     "primary-blue",
+    "primary-red",
     "primary-orange",
   ];
-  const cafes = ["Southern Stories", "Quench", "Nestle Hotspot", "Cafe One", "Urban Kitchen"];
+  const cafes = ["Southern Stories", "Quench","Cafe One", "Nestle Hotspot", "Urban Kitchen"];
   const photos = [
     "./assets/south.png",
     "./assets/salad.png",
-    "./assets/Italian.png",
     "./assets/mexican.png",
+    "./assets/Italian.png",
     "./assets/nonveg.png",
   ];
   const [photo, setPhoto] = useState("./assets/south.png");
