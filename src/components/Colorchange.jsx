@@ -102,7 +102,7 @@ const handleClick = (direction) => {
         <div className="flex pl-10 justify-between align-center gap-8 text-2xl cursor-pointer">
           <div className="hover:bg-white rounded-full p-2 pr-3 pl-3">
             {cartCount !== 0 && (
-              <div className="absolute top-9 right-80 text-xs flex items-center justify-center w-5 h-5 rounded-full bg-white border border-black">
+              <div className="absolute top-9 right-80 text-xs font-bold flex items-center justify-center w-5 h-5 rounded-full bg-white">
                 {cartCount}
               </div>
             )}
