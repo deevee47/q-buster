@@ -21,6 +21,7 @@ module.exports = {
         Poppins: ["Poppins"],
       },
       rotate: {
+        44: "44deg",
         34: "34deg",
         68: "68deg",
         102: "102deg",

@@ -27,22 +27,29 @@ const Colorchange = () => {
   const [photo, setPhoto] = useState("./assets/south.png");
   const [menuVisible, setMenuVisible] = useState(false);
   const [shouldScrollToMenu, setShouldScrollToMenu] = useState(false);
+  const [cartCount,setCartCount] = useState(0);
 
-  const handleClick = (direction) => {
-    const nextIndex = (colorIndex + 1) % colors.length;
-    setColorIndex(nextIndex);
-    const newTextColor = `text-${colors[nextIndex]}`;
-    const newBgColor = `bg-${colors[nextIndex]}`;
-    const newRotation =
-      direction === "clockwise"
-        ? `${44.5 * (nextIndex + 1)}deg`
-        : `-${44.5 * (nextIndex + 1)}deg`;
-    setTextColor(newTextColor);
-    setBgColor(newBgColor);
-    setRotation(newRotation);
-    setCafe(cafes[nextIndex]);
-    setPhoto(photos[nextIndex]);
-  };
+const handleClick = (direction) => {
+  let nextIndex;
+  let newRotation;
+  if (direction === "clockwise") {
+    nextIndex = (colorIndex + 1) % colors.length;
+    newRotation = `${44.5 * (nextIndex + 1)}deg`;
+  } else {
+    nextIndex = (colorIndex - 1 + colors.length) % colors.length;
+    newRotation = `-${44.5 * (nextIndex + 1)}deg`;
+  }
+
+  const newTextColor = `text-${colors[nextIndex]}`;
+  const newBgColor = `bg-${colors[nextIndex]}`;
+
+  setColorIndex(nextIndex);
+  setTextColor(newTextColor);
+  setBgColor(newBgColor);
+  setRotation(newRotation);
+  setCafe(cafes[nextIndex]);
+  setPhoto(photos[nextIndex]);
+};
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
@@ -94,8 +101,14 @@ const Colorchange = () => {
 
         <div className="flex pl-10 justify-between align-center gap-8 text-2xl cursor-pointer">
           <div className="hover:bg-white rounded-full p-2 pr-3 pl-3">
+            {cartCount !== 0 && (
+              <div className="absolute top-9 right-80 text-xs flex items-center justify-center w-5 h-5 rounded-full bg-white border border-black">
+                {cartCount}
+              </div>
+            )}
             <i className="ri-shopping-cart-2-line hover:[transition-all]"></i>
           </div>
+
           <div className="hover:bg-white rounded-full p-2 pr-3 pl-3">
             <i className="ri-notification-2-line"></i>
           </div>
@@ -137,9 +150,9 @@ const Colorchange = () => {
             className={`${bgColor} w-[75%] h-[150%] rounded-full absolute -top-[75%] -right-[10%] -z-20 flex flex-end items-end overflow-hidden`}
           >
             <img
-              src="./assets/rounded-food.png"
+              src="./assets/wheel2.svg"
               alt="Food"
-              className={`w-[70%] relative -bottom-[30%] transition-transform transform -right-[15%] duration-500 object-cover`}
+              className={`w-[100%] relative  transition-transform transform top-[45%] -right-[01%] duration-500 object-cover`}
               style={{ transform: `rotate(${rotation})` }}
             />
           </div>
