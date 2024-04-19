@@ -58,7 +58,7 @@ const handleClick = (direction) => {
 
   return (
     <div className="overflow-hidden">
-      <nav className="mt-8 flex justify-between items-center w-[80%] mx-auto">
+      <nav className="mt-4 flex justify-between items-center w-[80%] mx-auto">
         <div className="flex justify-between items-center gap-4">
           <img
             src="/assets/logo.png"
@@ -160,7 +160,7 @@ const handleClick = (direction) => {
             <img src={photo} alt="Food" />
           </div>
 
-          <div className="ml-12 mt-[55%] text-center mr-[24vh] flex justify-center items-center w-[80%]">
+          <div className="ml-12 mt-[51%] text-center mr-[24vh] flex justify-center items-center w-[80%]">
             <img
               onClick={() => {
                 handleClick("anti-clockwise");
