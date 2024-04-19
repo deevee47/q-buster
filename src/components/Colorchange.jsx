@@ -34,10 +34,10 @@ const handleClick = (direction) => {
   let newRotation;
   if (direction === "clockwise") {
     nextIndex = (colorIndex + 1) % colors.length;
-    newRotation = `${44.5 * (nextIndex + 1)}deg`;
+    newRotation = `${22.5 * (nextIndex)*2}deg`;
   } else {
     nextIndex = (colorIndex - 1 + colors.length) % colors.length;
-    newRotation = `-${44.5 * (nextIndex + 1)}deg`;
+    newRotation = `-${22.5 * (nextIndex)*2}deg`;
   }
 
   const newTextColor = `text-${colors[nextIndex]}`;
