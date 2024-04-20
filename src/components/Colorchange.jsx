@@ -37,7 +37,7 @@ const handleClick = (direction) => {
     newRotation = `${22.5 * (nextIndex)*2}deg`;
   } else {
     nextIndex = (colorIndex - 1 + colors.length) % colors.length;
-    newRotation = `-${22.5 * (nextIndex)*2}deg`;
+    newRotation = `${22.5 * (nextIndex)*2}deg`;
   }
 
   const newTextColor = `text-${colors[nextIndex]}`;
