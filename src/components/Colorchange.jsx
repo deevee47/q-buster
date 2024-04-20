@@ -145,7 +145,10 @@ const toggleMenu = () => {
                 " Wait Less, Eat Fresh "
               </div>
               <Button
-                onClick={toggleMenu}
+                onClick={() => {
+                  toggleMenu
+                  setExampleVisible(false);
+                }}
                 className={`${bgColor} rounded-full px-16 text-black font-medium w-fit`}
                 variant="shadow"
               >
