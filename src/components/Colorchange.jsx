@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Input, Button } from "@nextui-org/react";
 import { SearchIcon } from "./SearchIcon";
 import OrderMenu from "./OrderMenu";
+import Example from "./Example";
 
 const Colorchange = () => {
   const [colorIndex, setColorIndex] = useState(0);
@@ -27,7 +28,14 @@ const Colorchange = () => {
   const [photo, setPhoto] = useState("./assets/south.png");
   const [menuVisible, setMenuVisible] = useState(false);
   const [shouldScrollToMenu, setShouldScrollToMenu] = useState(false);
-  const [cartCount,setCartCount] = useState(0);
+  const [cartCount, setCartCount] = useState(0);
+  const [exampleVisible, setExampleVisible] = useState(false);
+
+  const handleCartClick = () => {
+    setExampleVisible(!exampleVisible);
+  };
+
+
 
 const handleClick = (direction) => {
   let nextIndex;
@@ -51,9 +59,9 @@ const handleClick = (direction) => {
   setPhoto(photos[nextIndex]);
 };
 
-  const toggleMenu = () => {
-    setMenuVisible(!menuVisible);
-    setShouldScrollToMenu(!menuVisible);
+const toggleMenu = () => {
+  setMenuVisible(!menuVisible);
+  setShouldScrollToMenu(!menuVisible);
   };
 
   return (
@@ -98,7 +106,6 @@ const handleClick = (direction) => {
             }
           />
         </div>
-
         <div className="flex pl-10 justify-between align-center gap-8 text-2xl cursor-pointer">
           <div className="hover:bg-white rounded-full p-2 pr-3 pl-3">
             {cartCount !== 0 && (
@@ -106,7 +113,10 @@ const handleClick = (direction) => {
                 {cartCount}
               </div>
             )}
-            <i className="ri-shopping-cart-2-line hover:[transition-all]"></i>
+            <i
+              onClick={handleCartClick}
+              className="ri-shopping-cart-2-line hover:[transition-all]"
+            ></i>
           </div>
 
           <div className="hover:bg-white rounded-full p-2 pr-3 pl-3">
@@ -187,6 +197,7 @@ const handleClick = (direction) => {
           </div>
         </div>
       </div>
+      {exampleVisible && <Example />}
       {menuVisible && (
         <OrderMenu
           cafe={cafe}
