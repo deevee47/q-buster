@@ -89,7 +89,7 @@ export default function Example() {
                                 key={product.id}
                                 className={`flex py-6 rounded-lg m-2 p-2 ${product.bgColor}`}
                               >
-                                <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md">
                                   <img
                                     src={product.imageSrc}
                                     alt={product.imageAlt}
@@ -97,7 +97,7 @@ export default function Example() {
                                   />
                                 </div>
 
-                                <div className="ml-4flex flex-1 flex-col border border-gray-300 mr-2 rounded-lg p-2">
+                                <div className="ml-4flex flex-1 flex-col mr-2 rounded-md p-2">
                                   <div>
                                     <div className="flex justify-between text-base font-medium text-gray-900 ">
                                       <h3>
