@@ -68,14 +68,18 @@ const toggleMenu = () => {
     <div className="overflow-hidden">
       <nav className="mt-4 flex justify-between items-center w-[80%] mx-auto">
         <div className="flex justify-between items-center gap-4">
-          <img
-            src="/assets/logo.png"
-            className="w-12 border-2 border-red-900 rounded-2xl"
-            alt="Logo"
-          />
-          <div className="font-Poppins font-semibold text-2xl text-center">
-            Q-Buster
-          </div>
+          <a href="https://landing-page-qbuster.vercel.app">
+            <img
+              src="/assets/logo.png"
+              className="w-12 border-2 border-red-900 rounded-2xl"
+              alt="Logo"
+            />
+          </a>
+          <a href="https://landing-page-qbuster.vercel.app">
+            <div className="font-Poppins font-semibold text-2xl text-center">
+              Q-Buster
+            </div>
+          </a>
         </div>
         <div className="w-[50%] ml-36">
           <Input
@@ -123,7 +127,9 @@ const toggleMenu = () => {
             <i className="ri-notification-2-line"></i>
           </div>
           <div className="hover:bg-white rounded-full p-2 pr-3 pl-3">
-            <i className=" border-2 border-black rounded-full ri-user-line"></i>
+            <a href="https://q-buster-phi.vercel.app/">
+              <i className=" border-2 border-black rounded-full ri-user-line"></i>
+            </a>
           </div>
         </div>
       </nav>
@@ -137,7 +143,8 @@ const toggleMenu = () => {
               One Stop Destination
             </div>
             <div className="text-black text-lg">
-              Beat the Queue: Get a wait time & unique token - track your order live & plan your time
+              Beat the Queue: Get a wait time & unique token - track your order
+              live & plan your time
             </div>
             <div className="w-fit flex flex-center flex-col items-center">
               <div className="pt-16 text-3xl font-medium italic pb-7 w-fit">
@@ -145,7 +152,7 @@ const toggleMenu = () => {
               </div>
               <Button
                 onClick={() => {
-                  toggleMenu()
+                  toggleMenu();
                 }}
                 className={`${bgColor} rounded-full px-16 text-black font-medium w-fit`}
                 variant="shadow"
