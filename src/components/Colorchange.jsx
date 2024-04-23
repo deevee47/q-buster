@@ -127,7 +127,7 @@ const toggleMenu = () => {
             <i className="ri-notification-2-line"></i>
           </div>
           <div className="hover:bg-white rounded-full p-2 pr-3 pl-3">
-            <a href="https://q-buster-phi.vercel.app/">
+            <a href="https://q-buster-phi.vercel.app/user/yourorders">
               <i className=" border-2 border-black rounded-full ri-user-line"></i>
             </a>
           </div>
