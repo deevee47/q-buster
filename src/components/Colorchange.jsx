@@ -141,12 +141,11 @@ const toggleMenu = () => {
               One Stop Destination
             </div>
             <div className="text-black text-lg">
-              Beat the Queue: Get a wait time & unique token - track your order
-              live & plan your time
+              Beat the Queue: Get a wait time & unique token - track your order live & plan your time
             </div>
             <div className="w-fit flex flex-center flex-col items-center">
               <div className="pt-16 text-3xl font-medium italic pb-7 w-fit">
-                " Wait Less, Eat Fresh "
+                " Skip The Wait, Get Your Plate "
               </div>
               <Button
                 onClick={() => {

@@ -5,25 +5,25 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 const products = [
   {
     id: 1,
-    name: "Chole Bhature",
+    name: "Mango Shake",
     href: "#",
     color: "Ready in 5 minutes",
-    price: "$80.00",
+    price: "Rs. 80",
     quantity: 1,
-    imageSrc: "./assets/chole.png",
-    imageAlt: "Chole Bhature",
-    bgColor: "bg-primary-beige/70"
+    imageSrc: "./assets/mango shake.jpeg",
+    imageAlt: "Mango Shake",
+    bgColor: "bg-primary-green/70"
   },
   {
     id: 2,
-    name: "Masala Maggi",
+    name: "Chole Bhature",
     href: "#",
-    color: "Ready in 2 minutes",
-    price: "$45.00",
+    color: "Ready in 5 minutes",
+    price: "Rs. 80",
     quantity: 1,
-    imageSrc: "./assets/maggie.jpeg",
-    imageAlt: "Masala Maggi",
-    bgColor: "bg-primary-red/70"
+    imageSrc: "./assets/chole.png",
+    imageAlt: "Chole Bhature",
+    bgColor: "bg-primary-blue/70"
   },
   // Add More Products here!
 ];
@@ -136,7 +136,7 @@ export default function Example() {
                     <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <p>Subtotal</p>
-                        <p>$125.00</p>
+                        <p>Rs. 160</p>
                       </div>
                       <p className="mt-0.5 text-sm text-gray-500">
                         Shipping and taxes calculated at checkout.
