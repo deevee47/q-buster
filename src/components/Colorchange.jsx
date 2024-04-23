@@ -68,14 +68,18 @@ const toggleMenu = () => {
     <div className="overflow-hidden">
       <nav className="mt-4 flex justify-between items-center w-[80%] mx-auto">
         <div className="flex justify-between items-center gap-4">
-          <img
-            src="/assets/logo.png"
-            className="w-12 border-2 border-red-900 rounded-2xl"
-            alt="Logo"
-          />
+          <a href="http://https://landing-page-qbuster.vercel.app">
+            <img
+              src="/assets/logo.png"
+              className="w-12 border-2 border-red-900 rounded-2xl"
+              alt="Logo"
+            />
+          </a>
+          <a href="http://https://landing-page-qbuster.vercel.app">
           <div className="font-Poppins font-semibold text-2xl text-center">
             Q-Buster
           </div>
+          </a>
         </div>
         <div className="w-[50%] ml-36">
           <Input
@@ -146,7 +150,7 @@ const toggleMenu = () => {
               </div>
               <Button
                 onClick={() => {
-                  toggleMenu()
+                  toggleMenu();
                 }}
                 className={`${bgColor} rounded-full px-16 text-black font-medium w-fit`}
                 variant="shadow"
